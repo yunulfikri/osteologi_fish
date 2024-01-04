@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:babylonjs_viewer/babylonjs_viewer.dart';
 import 'package:get/get.dart';
 import 'package:osteologi_fish/kepalaikan.dart';
 
