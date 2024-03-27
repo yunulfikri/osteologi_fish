@@ -37,6 +37,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   get: ^4.6.6
   model_viewer_plus: ^1.7.0
+  getwidget: ^4.0.0
 
 dev_dependencies:
   flutter_test:
@@ -66,6 +67,12 @@ flutter:
   #   - images/a_dot_ham.jpeg
   assets:
     - assets/kepalaikan.glb
+    - assets/fish_ekor.glb
+    - assets/fish_kepala.glb
+    - assets/fish_body.glb
+    - assets/kepala.png
+    - assets/badan.png
+    - assets/ekor.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

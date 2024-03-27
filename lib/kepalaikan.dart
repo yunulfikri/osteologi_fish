@@ -40,7 +40,9 @@ class _KepalaIkanScreenState extends State<KepalaIkanScreen> {
                     ]
                 ),
                 child: const ModelViewer(
-                  src: 'assets/kepalaikan.glb',
+                  backgroundColor: Colors.grey,
+                  cameraControls: true,
+                  src: 'assets/fish_ekor.glb',
                 ),
               ),
               const Text("Keterangan", style: TextStyle(
