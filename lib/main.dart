@@ -139,7 +139,7 @@ class _MyHomePageState extends State<MyHomePage> {
             onTap: () {
               Get.to(const DetailScreen(
                   judul: "Badan Ikan",
-                  ikan: "assets/fish_body.glb",
+                  ikan: "assets/body_update.glb",
                   keterangan:
                       "Bagian badan Ikan Keureling, atau Tor tambroides, memiliki struktur yang kompleks dan terdiri dari skeleton axial dan skeleton appendicularis. Skeleton axial mencakup ossa cranium, ossa verterbrae, ossa costae, dan urostylus vertebralis. Sedangkan, skeleton appendicularis terdiri dari sepasang sirip dada (pinna pectoralis), sepasang sirip perut (pinna pelvis), sirip punggung (pinna dorsalis), sirip anal (pinna analis), dan sirip ekor (pinna caudalis). Struktur ini memberikan Ikan Keureling kemampuan untuk bergerak dan beradaptasi dengan lingkungan hidupnya"));
             },

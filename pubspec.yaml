@@ -70,6 +70,9 @@ flutter:
     - assets/fish_ekor.glb
     - assets/fish_kepala.glb
     - assets/fish_body.glb
+    - assets/bagian1.glb
+    - assets/bagian2.glb
+    - assets/body_update.glb
     - assets/kepala.png
     - assets/badan.png
     - assets/ekor.png

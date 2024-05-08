@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:getwidget/getwidget.dart';
 import 'package:model_viewer_plus/model_viewer_plus.dart';
 class DetailScreen extends StatefulWidget {
   final String judul, ikan, keterangan;
@@ -8,10 +9,18 @@ class DetailScreen extends StatefulWidget {
 }
 
 class _DetailScreenState extends State<DetailScreen> {
-
+  late String sourceIkan;
 
   @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    sourceIkan = widget.ikan;
+
+  }
+  @override
   Widget build(BuildContext context) {
+
     return Scaffold(
         appBar: AppBar(
           title: Text(widget.judul),
@@ -24,7 +33,7 @@ class _DetailScreenState extends State<DetailScreen> {
                 Container(
                   margin: const EdgeInsets.symmetric(vertical: 10.0),
                   width: double.infinity,
-                  height: 350.0,
+                  height: 600.0,
                   decoration: const BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(10.0)),
                       color: Colors.white,
@@ -38,42 +47,49 @@ class _DetailScreenState extends State<DetailScreen> {
                       ]
                   ),
                   child: ModelViewer(
+
                     backgroundColor: Colors.grey,
                     cameraControls: true,
-                    src: widget.ikan,
+                    src: sourceIkan,
+                    id: "3Dfish",
+                    key: ValueKey(sourceIkan),
+
                   ),
                 ),
-                const Text("Keterangan", style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 24.0
-                ),),
-                Container(
-                    margin: const EdgeInsets.symmetric(vertical: 10.0),
-                    padding: const EdgeInsets.all(15.0),
-                    width: double.infinity,
-                    decoration: const BoxDecoration(
-                        borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                        color: Colors.white,
-                        boxShadow: [
-                          BoxShadow(
-                            color: Color.fromRGBO(234, 234, 234, 1.0),
-                            spreadRadius: 2,
-                            blurRadius: 4,
-                            offset: Offset(0, 3), // changes position of shadow
-                          ),
-                        ]
+                widget.judul == "Badan Ikan"? Column(
+                  children: [
+                    GFListTile(
+                      title: const Text("AV", style: TextStyle(color: Colors.white),),
+                      color: Colors.black54,
+                      icon: const Icon(Icons.add_circle, color: Colors.blue,),
+                      onTap: () {
+                        setState(() {
+                          sourceIkan="assets/bagian1.glb";
+                        });
+                      },
                     ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Text(widget.keterangan, style: const TextStyle(
-                          fontSize: 16.0,
-                          wordSpacing: 1.5
-                        ),textAlign: TextAlign.center,),
-                      ],
-                    )
-                )
+                    GFListTile(
+                      title: const Text("Os Vertabrae Abdominalis", style: TextStyle(color: Colors.white),),
+                      color: Colors.black54,
+                      icon: const Icon(Icons.add_circle, color: Colors.blue,),
+                      onTap: (){
+                        setState(() {
+                          sourceIkan="assets/bagian2.glb";
+                        });
+                      },
+                    ),
+                    GFListTile(
+                      title: const Text("reset", style: TextStyle(color: Colors.black),),
+                      color: Colors.white,
+                      icon: const Icon(Icons.restart_alt, color: Colors.red,),
+                      onTap: (){
+                        setState(() {
+                          sourceIkan="assets/body_update.glb";
+                        });
+                      },
+                    ),
+                  ],
+                ):SizedBox(height: 5.0,),
               ],
             ),
           ),
