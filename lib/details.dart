@@ -56,6 +56,50 @@ class _DetailScreenState extends State<DetailScreen> {
 
                   ),
                 ),
+                widget.judul == "Kepala Ikan"? Column(
+                  children: [
+                    GFListTile(
+                      title: const Text("Rahang", style: TextStyle(color: Colors.white),),
+                      color: Colors.black54,
+                      icon: const Icon(Icons.add_circle, color: Colors.blue,),
+                      onTap: () {
+                        setState(() {
+                          sourceIkan="assets/bagian1.glb";
+                        });
+                      },
+                    ),
+                    GFListTile(
+                      title: const Text("Infraorbitale", style: TextStyle(color: Colors.white),),
+                      color: Colors.black54,
+                      icon: const Icon(Icons.add_circle, color: Colors.blue,),
+                      onTap: (){
+                        setState(() {
+                          sourceIkan="assets/bagian2.glb";
+                        });
+                      },
+                    ),
+                    GFListTile(
+                      title: const Text("Operculare", style: TextStyle(color: Colors.white),),
+                      color: Colors.black54,
+                      icon: const Icon(Icons.add_circle, color: Colors.blue,),
+                      onTap: (){
+                        setState(() {
+                          sourceIkan="assets/bagian2.glb";
+                        });
+                      },
+                    ),
+                    GFListTile(
+                      title: const Text("reset", style: TextStyle(color: Colors.black),),
+                      color: Colors.white,
+                      icon: const Icon(Icons.restart_alt, color: Colors.red,),
+                      onTap: (){
+                        setState(() {
+                          sourceIkan="assets/body_update.glb";
+                        });
+                      },
+                    ),
+                  ],
+                ):const SizedBox(height: 0.0,),
                 widget.judul == "Badan Ikan"? Column(
                   children: [
                     GFListTile(
@@ -89,7 +133,7 @@ class _DetailScreenState extends State<DetailScreen> {
                       },
                     ),
                   ],
-                ):SizedBox(height: 5.0,),
+                ):const SizedBox(height: 0.0,),
               ],
             ),
           ),
