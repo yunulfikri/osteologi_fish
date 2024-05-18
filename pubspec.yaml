@@ -74,6 +74,9 @@ flutter:
     - assets/bagian2.glb
     - assets/body_update.glb
     - assets/kepala.png
+    - assets/kepala1.glb
+    - assets/kepala2.glb
+    - assets/kepala3.glb
     - assets/badan.png
     - assets/ekor.png
 

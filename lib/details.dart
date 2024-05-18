@@ -64,7 +64,7 @@ class _DetailScreenState extends State<DetailScreen> {
                       icon: const Icon(Icons.add_circle, color: Colors.blue,),
                       onTap: () {
                         setState(() {
-                          sourceIkan="assets/bagian1.glb";
+                          sourceIkan="assets/kepala2.glb";
                         });
                       },
                     ),
@@ -74,7 +74,7 @@ class _DetailScreenState extends State<DetailScreen> {
                       icon: const Icon(Icons.add_circle, color: Colors.blue,),
                       onTap: (){
                         setState(() {
-                          sourceIkan="assets/bagian2.glb";
+                          sourceIkan="assets/kepala1.glb";
                         });
                       },
                     ),
@@ -84,7 +84,7 @@ class _DetailScreenState extends State<DetailScreen> {
                       icon: const Icon(Icons.add_circle, color: Colors.blue,),
                       onTap: (){
                         setState(() {
-                          sourceIkan="assets/bagian2.glb";
+                          sourceIkan="assets/kepala3.glb";
                         });
                       },
                     ),
@@ -94,7 +94,7 @@ class _DetailScreenState extends State<DetailScreen> {
                       icon: const Icon(Icons.restart_alt, color: Colors.red,),
                       onTap: (){
                         setState(() {
-                          sourceIkan="assets/body_update.glb";
+                          sourceIkan="assets/fish_kepala.glb";
                         });
                       },
                     ),
