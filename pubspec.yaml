@@ -38,6 +38,7 @@ dependencies:
   get: ^4.6.6
   model_viewer_plus: ^1.7.0
   getwidget: ^4.0.0
+  google_fonts: ^6.2.1
 
 dev_dependencies:
   flutter_test:
@@ -77,8 +78,12 @@ flutter:
     - assets/kepala1.glb
     - assets/kepala2.glb
     - assets/kepala3.glb
+    - assets/fish_body3.glb
+    - assets/kepala3_pipi.glb
     - assets/badan.png
     - assets/ekor.png
+    - assets/uin.png
+    - assets/unsyiah.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

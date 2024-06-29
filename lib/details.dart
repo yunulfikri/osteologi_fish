@@ -22,6 +22,7 @@ class _DetailScreenState extends State<DetailScreen> {
   Widget build(BuildContext context) {
 
     return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 58, 123, 183),
         appBar: AppBar(
           title: Text(widget.judul),
         ),
@@ -39,7 +40,7 @@ class _DetailScreenState extends State<DetailScreen> {
                       color: Colors.white,
                       boxShadow: [
                         BoxShadow(
-                          color: Color.fromRGBO(234, 234, 234, 1.0),
+                          color: Color.fromRGBO(17, 17, 17, 1.0),
                           spreadRadius: 2,
                           blurRadius: 4,
                           offset: Offset(0, 3), // changes position of shadow
@@ -48,7 +49,7 @@ class _DetailScreenState extends State<DetailScreen> {
                   ),
                   child: ModelViewer(
 
-                    backgroundColor: Colors.grey,
+                    backgroundColor: Colors.black87,
                     cameraControls: true,
                     src: sourceIkan,
                     id: "3Dfish",
@@ -84,7 +85,7 @@ class _DetailScreenState extends State<DetailScreen> {
                       icon: const Icon(Icons.add_circle, color: Colors.blue,),
                       onTap: (){
                         setState(() {
-                          sourceIkan="assets/kepala3.glb";
+                          sourceIkan="assets/kepala3_pipi.glb";
                         });
                       },
                     ),
@@ -119,6 +120,16 @@ class _DetailScreenState extends State<DetailScreen> {
                       onTap: (){
                         setState(() {
                           sourceIkan="assets/bagian2.glb";
+                        });
+                      },
+                    ),
+                    GFListTile(
+                      title: const Text("Vertabrae Caudales", style: TextStyle(color: Colors.white),),
+                      color: Colors.black54,
+                      icon: const Icon(Icons.add_circle, color: Colors.blue,),
+                      onTap: (){
+                        setState(() {
+                          sourceIkan="assets/fish_body3.glb";
                         });
                       },
                     ),
